@@ -9,6 +9,11 @@ class FormValidatorPages {
         cy.visit(Cypress.env('baseUrlFormValid'))
     }
 
+    clearContactName() {
+        cy.get(this.locator.form.contactNameInput).clear()
+        return this
+    }
+
     clearInputContactName(name) {
         cy.get(this.locator.form.contactNameInput).clear().type(name)
         return this
@@ -33,6 +38,12 @@ class FormValidatorPages {
     tapRegisterButton() {
         cy.get(this.locator.form.registerButton).click()
         return this
+    }
+
+    verifyRequiredField() {
+        cy.get(this.locator.submit.invalidRequired)
+        .should('be.visible')
+        .and('contain.text', 'Please provide')
     }
 
     verifySubmitRegister() {

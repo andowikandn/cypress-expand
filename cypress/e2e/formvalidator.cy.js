@@ -7,7 +7,14 @@ describe('Form Validator Test', () => {
         formValidPage.visit()
     })
 
-    it('Filling form validator', () => {
+    it('Verify required field', () => {
+        formValidPage
+            .clearContactName()
+            .tapRegisterButton()
+            .verifyRequiredField()
+    })
+
+    it('Filling out form validator', () => {
         formValidPage
             .clearInputContactName('Bram')
             .inputContactNumber('021-1234567')

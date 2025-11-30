@@ -8,7 +8,8 @@ const FormValidatorLocators = {
     },
 
     submit: {
-        registerValidation: '[role="alert"]' 
+        invalidRequired: '.invalid-feedback',
+        registerValidation: '[role="alert"]'
     }
 }
 
