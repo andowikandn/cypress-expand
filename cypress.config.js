@@ -8,7 +8,9 @@ module.exports = defineConfig({
       baseUrlDropCricles: 'https://practice.expandtesting.com/drag-and-drop-circles',
       baseUrlFormValid: 'https://practice.expandtesting.com/form-validation',
       baseUrlUpload: 'https://practice.expandtesting.com/upload',
-      baseURlForgotPwd: 'https://practice.expandtesting.com/forgot-password'
+      baseURlForgotPwd: 'https://practice.expandtesting.com/forgot-password',
+      baseUrlMultipleWindows: 'https://practice.expandtesting.com/windows',
+      baseUrlInputWeb: 'https://practice.expandtesting.com/inputs'
     },
     setupNodeEvents(on, config) {
       // implement node event listeners here

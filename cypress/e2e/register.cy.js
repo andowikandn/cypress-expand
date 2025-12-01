@@ -23,7 +23,7 @@ describe('Register Test', () => {
     })
 
     it('Register with new account', () => {
-        registerPage.inputUsername('sarapanBubur')
+        registerPage.inputUsername('sarapanNasiUduk')
         registerPage.inputPassword('Pepayap4h1t!')
         registerPage.inputConfirmPassword('Pepayap4h1t!')
         registerPage.tapRegisterButton()
