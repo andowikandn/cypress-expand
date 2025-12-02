@@ -18,4 +18,4 @@ describe('Dowload File Test', () => {
             .downloadImageFile()
             .verifyImageFile()
     })
-});
+})
