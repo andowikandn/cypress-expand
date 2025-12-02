@@ -1,4 +1,4 @@
-import MultipleWindowPages from "../pages/multipleWindows";
+import MultipleWindowPages from '../pages/multipleWindows'
 
 describe('Multiple Windows Test', () => {
     const multipleWindowPage = new MultipleWindowPages()

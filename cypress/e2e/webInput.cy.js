@@ -26,6 +26,6 @@ describe('Web Input Test', () => {
             .tapDisplayButton()
             .verifyOutput()
             .tapClearButton()
-            .veriyClearBtn()
+            .verifyOutput()
     })
 })

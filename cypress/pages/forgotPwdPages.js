@@ -2,7 +2,7 @@ import ForgotPasswordLocators from '../locators/forgotPwdLocators'
 
 class ForgotPasswordPages {
     visit() {
-        cy.visit(Cypress.env('baseURlForgotPwd'))
+        cy.visit(Cypress.env('baseUrlForgotPwd'))
     }
 
     inputEmail(email) {
