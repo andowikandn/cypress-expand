@@ -73,7 +73,7 @@ class WebInputPages {
         return this
     }
 
-    veriyClearBtn() {
+    verifyClearBtn() {
         cy.get(WebInputLocators.output
             .outputNumber)
             .should('not.exist')

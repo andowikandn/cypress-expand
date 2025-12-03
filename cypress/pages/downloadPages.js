@@ -1,7 +1,7 @@
 import DownloadLocators from '../locators/downloadLocators'
 
 class DownloadPages {
-    
+
     visit() {
         cy.visit(Cypress.env('baseUrlDownloads'))
         return this
@@ -23,10 +23,10 @@ class DownloadPages {
     verifyFile(fileName) {
         const filePath = `${Cypress.config('downloadsFolder')}/${fileName}`
         cy.readFile(filePath, 'binary', { timeout: 20000 })
-          .should((buffer) => {
-              expect(buffer, 'File should exist').not.to.be.null
-              expect(buffer.length).to.be.gt(0)
-          })
+            .should((buffer) => {
+                expect(buffer, 'File should exist').not.to.be.null
+                expect(buffer.length).to.be.gt(0)
+            })
         return this
     }
 

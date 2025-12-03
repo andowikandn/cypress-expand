@@ -12,7 +12,7 @@ describe('Web Tables Test Demo QA: CRUD', () => {
             .deleteInsurance()
             .searchBox('Insurance')
             .verifyEmptySearch()
-        })
+    })
 
     it('Delete list Compliance then verify is empty', () => {
         webTablesPage
@@ -21,14 +21,20 @@ describe('Web Tables Test Demo QA: CRUD', () => {
             .verifyEmptySearch()
     })
 
-    it('User add new record', () => {
+    it('User add new then verify register form', () => {
+        webTablesPage
+            .userAddNew()
+            .verifyRegisterForm()
+    })
+
+    it('User add new record then close', () => {
         webTablesPage
             .userAddNew()
             .userCloseForm()
             .verifyBacktoList()
     })
 
-    it('User add new clik submit then verify required field', () => {
+    it('User add new click submit then verify required field', () => {
         webTablesPage
             .userAddNew()
             .userSubmit()

@@ -42,8 +42,8 @@ class FormValidatorPages {
 
     verifyRequiredField() {
         cy.get(this.locator.submit.invalidRequired)
-        .should('be.visible')
-        .and('contain.text', 'Please provide')
+            .should('be.visible')
+            .and('contain.text', 'Please provide')
         return this
     }
 

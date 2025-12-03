@@ -12,6 +12,7 @@ const WebTablesLocators = {
 
     create: {
         addNewRecord: '#addNewRecordButton',
+        registerPage: '#registration-form-modal',
         closeBtn: 'button.close',
         submitBtn: '#submit',
         errorRegisForm: '#lastName',
@@ -22,7 +23,7 @@ const WebTablesLocators = {
         salary: '#salary',
         department: '#department',
         header: 'h1' // Web Tables
-    }    
+    }
 }
 
 export default WebTablesLocators

@@ -8,29 +8,31 @@ describe('Login Test', () => {
   });
 
   it('Login with invalid credentials', () => {
-    loginPage.inputUsername('typo')
-    loginPage.inputPassword('typo')
-    loginPage.tapLoginButton()
-    loginPage.verifyErrorMessage()
-    loginPage.tapCloseMessage()
+    loginPage
+      .inputUsername('typo')
+      .inputPassword('typo')
+      .tapLoginButton()
+      .verifyErrorMessage()
+      .tapCloseMessage()
   })
 
   it('Login with valid credentials', () => {
-    loginPage.inputUsername('qwertyty')
-    loginPage.inputPassword('Qwerty12#$')
-    loginPage.tapLoginButton()
-    loginPage.verifySuccessMessage()
-    loginPage.tapCloseMessage()
+    loginPage
+      .inputUsername('qwertyty')
+      .inputPassword('Qwerty12#$')
+      .tapLoginButton()
+      .verifySuccessMessage()
+      .tapCloseMessage()
   })
 
   it('End to end flow', () => {
-    loginPage.inputUsername('qwertyty')
-    loginPage.inputPassword('Qwerty12#$')
-    loginPage.tapLoginButton()
-    loginPage.verifySuccessMessage()
-    loginPage.tapLogoutButton()
-    loginPage.verifyLogoutMessage()
-    loginPage.tapCloseMessage()
+    loginPage
+      .inputUsername('qwertyty')
+      .inputPassword('Qwerty12#$')
+      .tapLoginButton()
+      .verifySuccessMessage()
+      .tapLogoutButton()
+      .verifyLogoutMessage()
+      .tapCloseMessage()
   })
 })
-

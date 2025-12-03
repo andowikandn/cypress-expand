@@ -8,26 +8,29 @@ describe('Register Test', () => {
     })
 
     it('Register with required error fileds', () => {
-        registerPage.tapRegisterButton()
-        registerPage.verifyErrorField()
-        registerPage.tapCloseError()
+        registerPage
+            .tapRegisterButton()
+            .verifyErrorField()
+            .tapCloseError()
     })
 
     it('Register with account already registered', () => {
-        registerPage.inputUsername('qwertyty')
-        registerPage.inputPassword('Qwerty12#$')
-        registerPage.inputConfirmPassword('Qwerty12#$')
-        registerPage.tapRegisterButton()
-        registerPage.verifyErrorRegistered()
-        registerPage.tapCloseError()
+        registerPage
+            .inputUsername('qwertyty')
+            .inputPassword('Qwerty12#$')
+            .inputConfirmPassword('Qwerty12#$')
+            .tapRegisterButton()
+            .verifyErrorRegistered()
+            .tapCloseError()
     })
 
     it('Register with new account', () => {
-        registerPage.inputUsername('sarapanNasiUduk')
-        registerPage.inputPassword('Pepayap4h1t!')
-        registerPage.inputConfirmPassword('Pepayap4h1t!')
-        registerPage.tapRegisterButton()
-        registerPage.verifySuccessRegister()
-        registerPage.tapCloseError()
+        registerPage
+            .inputUsername('sarapanNasiUduk')
+            .inputPassword('Pepayap4h1t!')
+            .inputConfirmPassword('Pepayap4h1t!')
+            .tapRegisterButton()
+            .verifySuccessRegister()
+            .tapCloseError()
     })
 })

@@ -2,6 +2,13 @@ const fs = require('fs')
 const { defineConfig } = require("cypress")
 
 module.exports = defineConfig({
+  reporter: "mochawesome",
+  reporterOptions: {
+    reportDir: "cypress/reports",
+    overwrite: false,
+    html: true,
+    json: true
+  },
   e2e: {
     downloadsFolder: "cypress/downloads",
     env: {
@@ -18,7 +25,6 @@ module.exports = defineConfig({
       baseUrlWebTables: "https://demoqa.com/webtables",
     },
     setupNodeEvents(on, config) {
-      // implement node event listeners 
       on('task', {
         deleteFile(filePath) {
           if (fs.existsSync(filePath)) {
@@ -36,6 +42,3 @@ module.exports = defineConfig({
     },
   },
 })
-// # username test expantesting
-// # qwertyty
-// # Qwerty12#$

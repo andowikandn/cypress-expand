@@ -55,6 +55,12 @@ class WebTablesPages {
         return this
     }
 
+    verifyRegisterForm() {
+        cy.get(this.locator.create.registerPage)
+            .should('be.visible', 'Registration Form')
+        return this
+    }
+
     userCloseForm() {
         cy.get(this.locator.create.closeBtn)
             .click()
